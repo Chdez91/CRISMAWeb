@@ -1,0 +1,389 @@
+:root {
+  --blanco: #ffffff;
+  --oscuro: black;
+  --primario: rgb(232, 193, 97);
+  --secundario: rgb(9, 136, 162);
+  --gris: rgb(192, 190, 190);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  background-image: linear-gradient(to right top, #e5e8c7, #cde8cc, #b8e6d7, #aae2e4, #a9dbef, #a9daf2, #aad8f5, #acd6f7, #a1dcf8, #98e2f6, #93e7f0, #95ece7);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+}
+
+.logo-empresa {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.logo-empresa img {
+  max-width: 200px;
+  height: auto;
+  max-height: 100px;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 3.8rem;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.titulo span {
+  font-size: 2rem;
+}
+
+.nav-bg {
+  background-color: var(--secundario);
+}
+
+.contenedor {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.navegacion_principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .navegacion_principal {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.navegacion_principal a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.5rem;
+}
+
+.navegacion_principal a:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+}
+
+.hero {
+  background-image: url(../img/pexels-fotios-photos-918327.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+}
+
+.contenido-hero {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-hero h2, .contenido-hero p {
+  color: var(--blanco);
+  text-align: center;
+}
+
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: .7rem;
+  text-align: center;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    width: auto;
+  }
+}
+
+.sombra {
+  box-shadow: 22px 32px 45px -16px rgba(191, 0, 255, 0.41);
+}
+
+.producto, .contacto {
+  text-align: center;
+}
+
+/** Servicios **/
+
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.servicio .iconos {
+  height: 12rem;
+  width: 12rem;
+  background-color: var(--primario);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicio h3 {
+  color: var(--secundario);
+  font-weight: normal;
+  margin-top: 1rem;
+}
+
+.servicio p {
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/** Sobre Nosotros **/
+.sobre-nosotros {
+  background-color: var(--blanco);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-nosotros h2 {
+  text-align: center;
+  color: var(--secundario);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sobre-nosotros p {
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--oscuro);
+}
+
+/** Catálogo **/
+.catalogo-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.catalogo-item {
+  background-color: var(--blanco);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.catalogo-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.catalogo-item img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.catalogo-item h3 {
+  color: var(--secundario);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.catalogo-item p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--oscuro);
+  margin: 0;
+}
+
+.catalogo-item b {
+  color: var(--primario);
+}
+
+/** Responsive catálogo **/
+
+@media (max-width: 480px) {
+  .catalogo-contenedor {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .catalogo-item img {
+    height: 13rem;
+  }
+
+  .catalogo-item h3 {
+    font-size: 1.6rem;
+  }
+
+  .catalogo-item p {
+    font-size: 1.4rem;
+  }
+
+  .boton {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
+  .titulo {
+    font-size: 2.5rem;
+  }
+}
+
+/** Recursos interactivos **/
+
+.recursos-interactivos {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+/** Pedidos **/
+
+.realiza-pedidos {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #fff0f5;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.realiza-pedidos h2 {
+  color: #c44;
+}
+
+.realiza-pedidos p {
+  font-size: 1.6rem;
+}
+
+/** Formulario **/
+
+.formulario {
+  background-color: var(--gris);
+  width: min(60rem, 100%);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: blueviolet;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: .5rem;
+  display: block;
+}
+
+.campo textarea {
+  height: 20rem;
+}
+
+.w-sm-100 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-sm-100 {
+    width: auto;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.alinear-derecha {
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+  .contenedor-campos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 20rem;
+    column-gap: 1rem;
+  }
+
+  .campo:nth-child(3),
+  .campo:nth-child(4) {
+    grid-column: 1 / 3;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.4rem;
+}
